@@ -18,4 +18,8 @@ const Header = (props) => {
     )
 }
 
+Header.popTypes = {
+    tagline: React.PropTypes.string.isRequired
+}
+
 export default Header;
