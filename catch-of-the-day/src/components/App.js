@@ -11,7 +11,7 @@ class App extends React.Component {
     constructor() {
         super();
 
-        this.addFish = this.addFish.bind(this);
+        //this.addFish = this.addFish.bind(this);
         this.updateFish = this.updateFish.bind(this);
         this.loadSamples = this.loadSamples.bind(this);
         this.addToOrder = this.addToOrder.bind(this);
@@ -51,7 +51,7 @@ class App extends React.Component {
         localStorage.setItem(`order-${this.props.params.storeId}`, JSON.stringify(nextState.order));
     }
 
-    addFish(fish) {
+    addFish = (fish) => {
         // update our state
         const fishes = {...this.state.fishes};
         // add in our new fish
@@ -59,7 +59,7 @@ class App extends React.Component {
         fishes[`fish-${timestamp}`] = fish;
         // set state
         this.setState({ fishes });
-    }
+    };
 
     updateFish(key, updatedFish) {
         const fishes = {...this.state.fishes};
